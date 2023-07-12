@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+  function validateForm() {
+    let x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  }
+  </script>
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +62,7 @@ div.desc {
     
         <div class="header">
             
-            <img class="resized-image" src="new folder/WhatsApp Image 2023-07-03 at 23.36.02.jpg">
+            <img class="resized-image" src="WhatsApp Image 2023-07-03 at 23.36.02.jpg">
             <ul>
                 <li><a href="contact.html">CONTACT</a></li>
                 <li><a href="services.html">SERVICES</a></li> 
@@ -63,6 +72,11 @@ div.desc {
           </div>
         
         <nav>
+          <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            Name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+          </form>
+            
             
            
         <main>
